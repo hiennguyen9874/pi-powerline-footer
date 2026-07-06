@@ -2126,6 +2126,7 @@ export default function powerlineFooter(pi: ExtensionAPI) {
       cwd: ctx.cwd,
       usageStats: { input, output, cacheRead, cacheWrite, cost },
       contextPercent,
+      contextTokens,
       contextWindow,
       autoCompactEnabled: ctx.settingsManager?.getCompactionSettings?.()?.enabled ?? true,
       customCompactionEnabled: customCompactionEnabled || extensionStatuses.has(CUSTOM_COMPACTION_STATUS_KEY),

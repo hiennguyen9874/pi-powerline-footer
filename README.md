@@ -67,7 +67,7 @@ Use `"fixedEditor": true` to enable it again. Add `"mouseScroll": false` if you 
 
 | Preset | Description |
 |--------|-------------|
-| `default` | Model, thinking, path (basename), git, context, tokens, cost |
+| `default` | Model, thinking, path (basename), git, context tokens, cache, cost |
 | `minimal` | Just path (basename), git, context |
 | `compact` | Model, git, cost, context |
 | `full` | Everything including hostname, time, abbreviated path |
@@ -317,6 +317,12 @@ The path segment supports three modes:
 | `full` | `~/.pi/agent/extensions/powerline-footer` | Complete path with home abbreviated |
 
 Configure via preset options: `path: { mode: "full" }`
+
+## Context Display
+
+The default preset shows context usage as tokens used over the context window, e.g. `46k/272k`. Other presets keep the percentage style, e.g. `17.1%/272k`.
+
+Configure with `context_pct: { display: "tokens" }` or `context_pct: { display: "percent" }`.
 
 ## Git polling
 

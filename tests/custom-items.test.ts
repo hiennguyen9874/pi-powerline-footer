@@ -75,6 +75,7 @@ test("mergeSegmentOptions lets user config override preset segment defaults", ()
       path: { mode: "full", maxLength: 20 },
       git: { showBranch: true, showUntracked: false },
       time: {},
+      context_pct: {},
     },
   );
 });

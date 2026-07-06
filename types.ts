@@ -89,6 +89,7 @@ export interface StatusLineSegmentOptions {
     polling?: "full" | "branch" | "off";
   };
   time?: { format?: "12h" | "24h"; showSeconds?: boolean };
+  context_pct?: { display?: "percent" | "tokens" };
 }
 
 export type CustomItemPosition = "left" | "right" | "secondary";
@@ -154,6 +155,7 @@ export interface SegmentContext {
   // Computed
   usageStats: UsageStats;
   contextPercent: number;
+  contextTokens: number;
   contextWindow: number;
   autoCompactEnabled: boolean;
   customCompactionEnabled: boolean;

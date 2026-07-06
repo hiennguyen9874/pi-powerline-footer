@@ -119,6 +119,12 @@ function normalizeSegmentOptions(raw: Record<string, unknown>): StatusLineSegmen
     };
   }
 
+  if (isRecord(raw.context_pct)) {
+    options.context_pct = {
+      ...(raw.context_pct.display === "percent" || raw.context_pct.display === "tokens" ? { display: raw.context_pct.display } : {}),
+    };
+  }
+
   return options;
 }
 
@@ -133,6 +139,7 @@ export function mergeSegmentOptions(
     path: { ...defaults.path, ...overrides.path },
     git: { ...defaults.git, ...overrides.git },
     time: { ...defaults.time, ...overrides.time },
+    context_pct: { ...defaults.context_pct, ...overrides.context_pct },
   };
 }
 

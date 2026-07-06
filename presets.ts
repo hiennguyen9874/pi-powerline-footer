@@ -32,6 +32,7 @@ export const PRESETS: Record<StatusLinePreset, PresetDef> = {
       model: { showThinkingLevel: false },
       path: { mode: "basename" },
       git: { showBranch: true, showStaged: true, showUnstaged: true, showUntracked: true },
+      context_pct: { display: "tokens" },
     },
   },
 
